@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { useGlobalContext } from '../context/context';
+import { useSelector, useDispatch } from 'react-redux';
+import { getAddTaskAction } from '../actions';
 
 const AddTask = () => {
   
-  const { tasksDispatch } = useGlobalContext();
+  const  tasksState = useSelector((state) => state.tasksReducer);
+  const dispatch = useDispatch();
   const [task, setTask] = useState("");
   
   const handleChange = (e) => {
@@ -13,7 +15,7 @@ const AddTask = () => {
   const handleSubmit = (e) => {
     if(e.key !== "Enter") return;
     if(task == "") return;
-    tasksDispatch({type: "ADD_TASK", payload: task});
+    dispatch(getAddTaskAction(task));
     setTask("");
   }
   

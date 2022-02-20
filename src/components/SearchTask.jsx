@@ -1,11 +1,14 @@
 import React from 'react'
-import { useGlobalContext } from '../context/context'
+import { useSelector, useDispatch } from 'react-redux';
+import { getSetQueryAction } from '../actions';
 
 const SearchTask = () => {
   
-  const { setQuery } = useGlobalContext();
+  const queryState = useSelector((state) => state.queryReducer);
+  const dispatch = useDispatch();
+
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    dispatch(getSetQueryAction(e.target.value));
   }
   
   return (

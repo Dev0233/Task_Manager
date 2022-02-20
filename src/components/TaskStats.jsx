@@ -1,9 +1,9 @@
 import React from 'react'
-import { useGlobalContext } from '../context/context'
+import { useSelector, useDispatch } from 'react-redux';
 
 const TaskStats = () => {
-  
-  const { tasksState } = useGlobalContext();
+
+  const tasksState = useSelector((state) => state.tasksReducer);
   const tasks = tasksState.tasks;
   const completedNoOfTasks = tasks.filter(task => task.isCompleted).length;
   const pendingNoOfTasks = tasks.length - completedNoOfTasks;

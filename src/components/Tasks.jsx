@@ -1,12 +1,13 @@
 import React from 'react'
 import Task from "./Task";
-import { useGlobalContext } from '../context/context'
+import { useSelector, useDispatch } from 'react-redux';
 
 const Tasks = () => {
   
-  const {tasksState, query} = useGlobalContext();
+  const tasksState = useSelector((state) => state.tasksReducer);
+  const query = useSelector((state) => state.queryReducer);
+  
   let tasks = tasksState.tasks;
-  // console.log(tasks);
   
   if(query != "")
   {

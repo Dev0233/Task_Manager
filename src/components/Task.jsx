@@ -1,16 +1,18 @@
 import React from 'react'
-import { useGlobalContext } from '../context/context'
+import { useSelector, useDispatch } from 'react-redux';
+import { getDeleteTaskAction, getToggleTaskStatusAction } from '../actions';
 
 const Task = ({ task }) => {
   
-  const {tasksDispatch} = useGlobalContext();
-  
+  const queryState = useSelector((state) => state.queryReducer);
+  const dispatch = useDispatch();
+
   const handleDelete = () => {
-    tasksDispatch({ type: "DELETE_TASK", payload: {id: task.id} });
+    dispatch(getDeleteTaskAction(task.id));
   }
   
   const toggleTaskStatus = () => {
-    tasksDispatch({ type: "TOGGLE_TASK_STATUS", payload: { id: task.id } });
+    dispatch(getToggleTaskStatusAction(task.id));
   }
   
   return (
