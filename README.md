@@ -1,5 +1,9 @@
 # Task Manager
-A simple task manager app built using React.
+A simple task manager app built using React and Redux. 
+
+
+### Note:
+This app works exactly same as the [React task Manager](https://github.com/aayush301/React-task-manager/) except the fact that this one uses Redux store for state management in contrast to the other one which simply uses React's Context API + useContext hook + useReducer hook for the same.
 
 ## Features
 - New tasks can be added.
@@ -13,6 +17,7 @@ A simple task manager app built using React.
 - Javascript
 - Node.js
 - React
+- Redux
 
 ## Steps to run the application
 1. Download the source code in the desired location on your system.
