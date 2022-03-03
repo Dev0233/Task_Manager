@@ -1,7 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import TaskContainer from './components/TaskContainer'
-import store from './store'
+import store from './redux/store'
 import { Provider } from "react-redux"
 store.subscribe(() => console.log(store.getState()));
 
