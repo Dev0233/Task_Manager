@@ -1,6 +1,5 @@
 # Task Manager
 A simple task manager app built using React and Redux. 
-[View Demo](https://redux-task-manager-aayush.herokuapp.com/)
 
 ### Note:
 - This project uses Vitejs as the front end build tool.
@@ -43,7 +42,6 @@ A simple task manager app built using React and Redux.
 5. Open browser and go to url: http://localhost:3000. You can see the app running now.
 
 ## Useful Links
-- Demo: https://redux-task-manager-aayush.herokuapp.com/
 - Github Repo: https://github.com/aayush301/Redux-task-manager
 - Nodejs download: https://nodejs.org/
 - VS Code download: https://code.visualstudio.com/
